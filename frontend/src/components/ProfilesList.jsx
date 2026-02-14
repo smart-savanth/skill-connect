@@ -209,6 +209,7 @@ const ProfilesList = () => {
                 <div className="profile-content">
                   <h2 className="profile-name">{profile.full_name}</h2>
                   <p className="profile-role">{profile.short_intro}</p>
+                  <p className="profile-help">{profile.community_help}</p>
                   {profile.domain && (
                     <span className="profile-domain">{profile.domain}</span>
                   )}

@@ -204,7 +204,7 @@ const ProfileSubmission = () => {
             value={formData.whatTheyDo}
             onChange={handleChange}
             className={errors.whatTheyDo ? "error" : ""}
-            placeholder="e.g., Professional dog trainer & pet behaviorist"
+            placeholder="e.g., Current role or professional focus"
             rows="2"
           />
           {errors.whatTheyDo && (
@@ -220,7 +220,7 @@ const ProfileSubmission = () => {
             name="domain"
             value={formData.domain}
             onChange={handleChange}
-            placeholder="e.g., Veterinary, Training, Grooming"
+            placeholder="e.g., Primary domain or area of expertise"
           />
         </div>
 
@@ -234,7 +234,7 @@ const ProfileSubmission = () => {
             value={formData.description}
             onChange={handleChange}
             className={errors.description ? "error" : ""}
-            placeholder="Describe how you can contribute to the community..."
+            placeholder="Brief description of how you can contribute or support others"
             rows="4"
           />
           {errors.description && (
