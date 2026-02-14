@@ -1,0 +1,99 @@
+/* App.css - Updated with new color palette */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #355c7d 0%, #6c5b7b 50%, #c06c84 100%);
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+}
+
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #fce4ec;
+  border-top: 4px solid #355c7d;
+  border-right: 4px solid #c06c84;
+  border-bottom: 4px solid #f8b195;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Error Message */
+.error-message {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #fce4ec, #f8b195);
+  border-radius: 1rem;
+  color: #c06c84;
+  border-left: 4px solid #c06c84;
+}
+
+/* Utility Classes */
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #355c7d, #6c5b7b);
+  color: white;
+  box-shadow: 0 4px 15px rgba(53, 92, 125, 0.3);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(53, 92, 125, 0.5);
+  background: linear-gradient(135deg, #6c5b7b, #c06c84);
+}
+
+.btn-secondary {
+  background: white;
+  color: #355c7d;
+  border: 2px solid #355c7d;
+  box-shadow: none;
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(135deg, #355c7d, #6c5b7b);
+  color: white;
+  border-color: transparent;
+}

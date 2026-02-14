@@ -1,0 +1,71 @@
+/* components/Navbar.css - Updated with new color palette */
+.navbar {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(53, 92, 125, 0.15);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(192, 108, 132, 0.2);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  background: linear-gradient(135deg, #355c7d, #6c5b7b, #c06c84);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.5rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.logo-icon {
+  font-size: 1.8rem;
+  color: #c06c84;
+  filter: drop-shadow(0 2px 4px rgba(192, 108, 132, 0.4));
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: #6c5b7b;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  background: linear-gradient(135deg, #fce4ec, #f8b195);
+  color: #355c7d;
+}
+
+.nav-link.active {
+  background: linear-gradient(135deg, #355c7d, #6c5b7b);
+  color: white;
+  box-shadow: 0 4px 10px rgba(53, 92, 125, 0.3);
+}
+
+.nav-icon {
+  font-size: 1.2rem;
+}

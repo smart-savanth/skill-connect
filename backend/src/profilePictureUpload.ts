@@ -9,18 +9,17 @@ if (!fs.existsSync(uploadDir)) {
   fs.mkdirSync(uploadDir, { recursive: true });
 }
 
-
 const storage = multer.diskStorage({
   destination: (_req, _file, cb) => {
     cb(null, uploadDir);
   },
 
   filename: (req: any, file, cb) => {
-    const userId = req.params.userId;     // from auth middleware
-    
-     if (!userId) {
-    return cb(new Error("userId is required in params"), "");
-  }
+    const userId = req.params.userId; // from auth middleware
+
+    if (!userId) {
+      return cb(new Error("userId is required in params"), "");
+    }
     const ext = path.extname(file.originalname).toLowerCase();
 
     cb(null, `${userId}${ext}`);
