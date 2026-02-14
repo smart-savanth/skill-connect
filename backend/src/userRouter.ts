@@ -4,6 +4,7 @@ import { db } from "./db/dbCon"
 import { and, count, isNull, desc, eq, ilike, or } from "drizzle-orm"
 import { v4 } from "uuid"
 import { uploadUserProfile } from "./profilePictureUpload"
+import { appConfig } from "./config/appConfig"
 
 
 
@@ -98,7 +99,7 @@ userRouter.post("/:userId/upload-profile-picture",
             throw new Error("No file uploaded");
           }
 
-          const imagePath = `/profilePictures/${req.file.filename}`;
+          const imagePath = `${appConfig.baseURL}/profilePictures/${req.file.filename}`;
           const user = db.update(profiles)
             .set({ profile_image_url: imagePath })
             .where(eq(profiles.guid, req.params.userId as string))

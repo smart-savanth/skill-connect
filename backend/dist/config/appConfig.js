@@ -4,6 +4,7 @@ exports.appConfig = void 0;
 require("dotenv/config");
 exports.appConfig = {
     port: process.env.PORT || 6081,
+    baseURL: process.env.BASE_URL,
     pg: {
         host: process.env.DB_HOST,
         port: process.env.DB_PORT,

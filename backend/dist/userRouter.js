@@ -9,6 +9,7 @@ const dbCon_1 = require("./db/dbCon");
 const drizzle_orm_1 = require("drizzle-orm");
 const uuid_1 = require("uuid");
 const profilePictureUpload_1 = require("./profilePictureUpload");
+const appConfig_1 = require("./config/appConfig");
 const userRouter = express_1.default.Router();
 userRouter.post("/saveProfile", async (req, res, next) => {
     try {
@@ -86,7 +87,7 @@ userRouter.post("/:userId/upload-profile-picture", profilePictureUpload_1.upload
         if (!req.file) {
             throw new Error("No file uploaded");
         }
-        const imagePath = `/profilePictures/${req.file.filename}`;
+        const imagePath = `${appConfig_1.appConfig.baseURL}/profilePictures/${req.file.filename}`;
         const user = dbCon_1.db.update(user_profile_1.profiles)
             .set({ profile_image_url: imagePath })
             .where((0, drizzle_orm_1.eq)(user_profile_1.profiles.guid, req.params.userId))
